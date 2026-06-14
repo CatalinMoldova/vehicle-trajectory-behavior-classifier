@@ -45,6 +45,12 @@ Metrics below were produced on the included synthetic sample (`data/sample/sampl
 | LSTM | 1.000 | 1.000 | 1.000 | Sequence baseline |
 | CNN-LSTM | 0.250 | 0.133 | 0.100 | Main model (needs more data) |
 
+> These synthetic numbers are a smoke test, not a benchmark — the sample is trivially
+> separable by mean speed. On the **real (private) Aimsun dataset**, with a leakage-safe
+> split grouped by vehicle, all models sit near the ~51% majority baseline (CNN-LSTM
+> macro-F1 ≈ 0.31). See [`data/README.md`](data/README.md) for the real-data table and
+> instructions on running `scripts/run_on_real_data.py`.
+
 ![Architecture](assets/architecture.png)
 
 ![Trajectory examples](assets/trajectory_examples.png)
@@ -65,6 +71,7 @@ vehicle-trajectory-behavior-classifier/
 ├── scripts/
 │   ├── setup_env.sh
 │   ├── generate_sample_data.py
+│   ├── run_on_real_data.py
 │   ├── generate_assets.py
 │   └── train_all_models.sh
 ├── src/vehicle_behavior/     # reusable package

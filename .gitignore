@@ -11,3 +11,8 @@ key.json
 *.h5
 artifacts/
 data/raw/
+
+# Private Aimsun/NYU research data (do not commit — exceeds GitHub limits and is confidential)
+Time_Series_data/
+Time_Series_data*.zip
+*.zip
