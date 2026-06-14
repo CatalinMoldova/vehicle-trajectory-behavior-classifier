@@ -1,0 +1,2 @@
+model,accuracy,f1_macro,f1_weighted
+logistic_regression,1.0,1.0,1.0

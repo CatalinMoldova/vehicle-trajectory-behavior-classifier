@@ -5,6 +5,7 @@ random_state: 42
 batch_size: 32
 epochs: 20
 learning_rate: 0.001
+model: cnn_lstm
 
 data:
   sample_path: data/sample/sample_trajectories.csv

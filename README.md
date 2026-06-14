@@ -12,6 +12,41 @@ Two principal model training strategies are provided:
 
 Both models utilize a sophisticated **CNN-LSTM hybrid architecture** that ingests time-series vehicle speed and position data, engineered to capture temporal and spatial patterns symptomatic of driver behavior categories (aggressive, cooperative, and normal).
 
+## Reproducible Setup (Virtual Environment)
+
+Use a project-local virtual environment so dependencies are isolated and reproducible. The `.venv/` directory is gitignored and is **not** committed.
+
+**Option A — automated setup (recommended):**
+
+```bash
+git clone https://github.com/CatalinMoldova/Vehicle-Classifier.git
+cd Vehicle-Classifier
+bash scripts/setup_env.sh
+source .venv/bin/activate
+```
+
+**Option B — manual setup:**
+
+```bash
+python3.11 -m venv .venv
+source .venv/bin/activate        # Windows: .venv\Scripts\activate
+pip install --upgrade pip
+pip install -r requirements.txt
+pip install -e ".[dev]"
+python scripts/generate_sample_data.py
+```
+
+**Run the pipeline:**
+
+```bash
+python -m vehicle_behavior.train --config configs/default.yaml --model logistic_regression
+python -m vehicle_behavior.evaluate --model artifacts/logistic_regression.joblib
+python -m vehicle_behavior.predict --input data/sample/sample_trajectories.csv --model artifacts/logistic_regression.joblib
+pytest
+```
+
+In Cursor/VS Code, select the interpreter at `.venv/bin/python` when prompted (or click **Create** on the virtual-environment notification).
+
 ## Data Access Requirements
 
 **Box API Authentication**  

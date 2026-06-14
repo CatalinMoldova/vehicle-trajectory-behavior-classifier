@@ -4,6 +4,8 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 .venv/
+venv/
+env/
 key.json
 *.keras
 *.h5
