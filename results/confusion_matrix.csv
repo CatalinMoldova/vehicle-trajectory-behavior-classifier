@@ -1,4 +1,4 @@
 ,aggressive,cooperative,normal
 aggressive,2,0,0
-cooperative,0,3,0
-normal,0,0,3
+cooperative,3,0,0
+normal,3,0,0

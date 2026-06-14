@@ -1,2 +1,5 @@
 model,accuracy,f1_macro,f1_weighted
 logistic_regression,1.0,1.0,1.0
+random_forest,1.0,1.0,1.0
+lstm,1.0,1.0,1.0
+cnn_lstm,0.25,0.13333333333333333,0.1
