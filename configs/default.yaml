@@ -1,0 +1,13 @@
+sequence_length: 60
+num_classes: 3
+test_size: 0.2
+random_state: 42
+batch_size: 32
+epochs: 20
+learning_rate: 0.001
+
+data:
+  sample_path: data/sample/sample_trajectories.csv
+
+artifacts_dir: artifacts
+results_dir: results
